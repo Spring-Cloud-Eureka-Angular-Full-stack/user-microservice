@@ -67,9 +67,7 @@ public class StudentController {
 
         try {
             Student studentDB = this.studentService.save(student);
-            response.put("message", "Estudiante creado satisfactoriamente");
-            response.put("student", studentDB);
-            return ResponseEntity.status(HttpStatus.CREATED).body(response);
+            return ResponseEntity.status(HttpStatus.CREATED).body(studentDB);
 
         } catch (Exception e) {
             response.put("error", e.getMessage());
