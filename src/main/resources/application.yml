@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: user-microservice
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_microservices_exams
+    username: root
+    password: mysql
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        format-sql: true
+    hibernate:
+      ddl-auto: update
+    
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+    
+    
+server:
+  port: ${PORT:0}
