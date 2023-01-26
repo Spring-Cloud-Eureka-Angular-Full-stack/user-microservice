@@ -22,7 +22,7 @@ import com.lagm.microservices.app.users.models.entity.Student;
 import com.lagm.microservices.app.users.services.IStudentService;
 
 @RestController
-@RequestMapping("api/student")
+@RequestMapping
 public class StudentController {
 
     private Logger LOGGER = LoggerFactory.getLogger(StudentController.class);
