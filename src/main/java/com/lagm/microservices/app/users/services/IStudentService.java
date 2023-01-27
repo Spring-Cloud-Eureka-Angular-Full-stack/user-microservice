@@ -1,12 +1,8 @@
 package com.lagm.microservices.app.users.services;
 
 import com.lagm.microservices.app.users.models.entity.Student;
+import com.lagm.microservices.commons.services.ICommonService;
 
-import java.util.Optional;
-
-public interface IStudentService {
-    Iterable<Student> findAll();
-    Optional<Student> findById(Long id);
-    Student save(Student student);
-    void deleteById(Long id);
+public interface IStudentService extends ICommonService<Student> {
+    
 }
